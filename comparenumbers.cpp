@@ -15,9 +15,9 @@ void compareNumber(int nums[], int n)
         return;
     }
     // start with the first element of the array
+    // loop to check the other elements
     int largestNumber = nums[0];
     int smallestNumber = nums[0];
-    // loop to check the other elements
     for (int i = 1; i < n; i++)
     {
         // update the largestnumber by checking the elements in the array
@@ -28,7 +28,7 @@ void compareNumber(int nums[], int n)
         // update the smallestnumber in the array by checking elements in the array
         if (nums[i] < smallestNumber)
         {
-
+            
             smallestNumber = nums[i];
         }
     }
