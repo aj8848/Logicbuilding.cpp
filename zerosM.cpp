@@ -13,7 +13,7 @@ int main()
     // find the number of elements in the array
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    // initialize the left pointer to the start of the array
+    // left marks the next position where a non-zero element should go.
     int left = 0;
 
     // iterate through the array with the right pointer
