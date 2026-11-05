@@ -9,7 +9,7 @@ int main()
 {
     // array initialization with some zeros
     // we will move all zeros to the end of the array while maintaining the relative order of non-zero elements
-    int arr[] = {0, 4, 5, 0, 12, 0, 6, 0, 0};
+    int arr[] = {0, 2, 0, 4, 0, 0, 5, 1, 0};
     // find the number of elements in the array
     int n = sizeof(arr) / sizeof(arr[0]);
 
@@ -19,15 +19,13 @@ int main()
     // iterate through the array with the right pointer
     for (int right = 0; right < n; right++)
     {
-        if (arr[right] != 0)
+        if (arr[right] != 0 && right > left)
         {
-            if (right != left)
-            {
-                // swap the elements at left and right pointers
-                int temp = arr[left];
-                arr[left] = arr[right];
-                arr[right] = temp;
-            }
+
+            // swap the elements at left and right pointers
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
             left++;
             // move the left pointer to the next position to continue the process
         }
